@@ -12,7 +12,13 @@ public class Menu {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Meny: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation");
-        int input = scanner.nextInt();
+        int input = 0;
+
+        try {
+            input = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException ex){
+            ex.printStackTrace();
+        }
 
         switch (input) {
 
@@ -21,8 +27,9 @@ public class Menu {
                 break;
 
             case 2:
-            String abbreviation = scanner.nextLine();
-            wf.findExpression(map, abbreviation);
+                System.out.println("Enter abbreviation to look up: ");
+                String abbreviation = scanner.nextLine();
+                wf.findExpression(map, abbreviation);
                 break;
         }
 
