@@ -5,23 +5,15 @@ import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
-
-
 public class TestAddWords {
-    private String userEntersWords;
-    private String shortWord;
-    private HashMap<String, String> storedWords;
-
-    public void addWordsTest() {
-        storedWords = new HashMap<>();
-        shortWord = "lol";
-        userEntersWords = "laugh out loud";
-        storedWords.put(shortWord, userEntersWords);
-    }
+    private String wordMeaning = "laugh out loud";
+    private String abbreviation = "lol";
+    private HashMap<String, String> storedWords = new HashMap<>();
 
     @Test
     public void testAddingWordsToHashMap() {
-        assertEquals(storedWords.put(shortWord, userEntersWords), storedWords.get(shortWord), "Testing to add one word and then fetching the key from the map");
+        storedWords.put(abbreviation, wordMeaning);
+        assertEquals(wordMeaning, storedWords.get(abbreviation), "Testing to add one word and then fetching the key from the map");
     }
 
 

@@ -16,11 +16,11 @@ public class Menu {
         fm.fillMap(map);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Meny: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation \n Press 3 to exit");
         int input = 0;
 
-
-        while (input != 3) {
+        foreverloop:
+        while (true) {
+            System.out.println("Menu: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation \n Press 3 to exit");
 
             try {
                 input = Integer.parseInt(scanner.nextLine());
@@ -31,16 +31,20 @@ public class Menu {
             switch (input) {
 
                 case 1:
-                    aw.addWord(map);
+                    map = aw.addWord(map, scanner);
                     break;
                 case 2:
                     System.out.println("Enter abbreviation to look up: ");
                     String abbreviation = scanner.nextLine();
                     System.out.println(wf.findExpression(map, abbreviation)); 
                     break;
+                case 3:
+                    break foreverloop;
+                default:
+                    System.out.println("Wrong input, enter one of the following");
+                    break;
+
             }
-            System.out.println("Meny: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation");
-            //input = scanner.nextInt();
         }
         System.out.println("Welcome back!");
 
