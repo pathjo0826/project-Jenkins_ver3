@@ -15,7 +15,7 @@ public class FillMap {
     public HashMap<String, String> fillMap(HashMap<String, String> map) {
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("/Users/patrikhjortberg/Documents/JavaYrgo/Utvecklingsverktyg/project-Jenkins/abbreviations"));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/java/se/yrgo/classes/abbreviations"));
 
             String key;
             String value;
