@@ -9,8 +9,12 @@ import java.io.IOException;
 
 public class FillMap {
 
-    //private HashMap<String, String>;
-
+    /**
+     * This method fills up a HashMap with keys of "internet expressions" and values of
+     * their respective meanings. The HashMap inputs are read from a text file.
+     * @param map
+     * @return
+     */
 
     public HashMap<String, String> fillMap(HashMap<String, String> map) {
 
@@ -38,5 +42,4 @@ public class FillMap {
         }
         return map;
     }
-
 }

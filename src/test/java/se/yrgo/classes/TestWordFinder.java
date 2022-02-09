@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class TestWordFinder {
 
+
     @Test
     public void test(){
         System.out.println("This is a test");
@@ -53,7 +54,7 @@ public class TestWordFinder {
 
         WordFinder wf = new WordFinder();
 
-        assertThrows(ExpressionNotFoundException.class, () -> wf.findExpression(hashMap,"laaal"));
+        assertThrows(ExpressionNotFoundException.class, () -> wf.findExpression(hashMap,"something that does not exist"));
     }
 
 }

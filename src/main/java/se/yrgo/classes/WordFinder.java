@@ -8,8 +8,8 @@ public class WordFinder {
     Scanner scanner = new Scanner(System.in);
 
     /**
-     * This method searches for a given internet abbreviation. If it exists, it prints out its meaning.
-     * If the abbreviation does not exist it throws an exception and tells you to kys.
+     * This method searches a HashMap for a given internet expression. If it exists, it prints out
+     * its meaning. If the abbreviation does not exist it throws an exception and stops running.
      * @param hash
      * @param input
      * @return
