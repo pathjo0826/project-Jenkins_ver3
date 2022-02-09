@@ -18,20 +18,25 @@ public class TestWordFinder {
     @Test
     public void testWordFinder(){
 
+        Scanner scanner = new Scanner(System.in);
+        String key = "wtf";
+        String value = "what the fuck";
+
 
         HashMap<String, String> hashMap = new HashMap();
-        hashMap.put("wtf", "what the fuck");
+        hashMap.put(key, value);
 
         WordFinder wf = new WordFinder();
-        wf.findExpression(hashMap,"wtf");
+        wf.findExpression(hashMap,key);
 
-        assertEquals("what the fuck", hashMap.get("wtf"));
+        assertEquals(value, hashMap.get(key));
+
 
     }
 
     @Test
     public void testExpressionNotFound(){
-        final HashMap<String, String> hashMap = new HashMap<String, String>();
+        final HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("lol", "laughing out loud");
 
         WordFinder wf = new WordFinder();

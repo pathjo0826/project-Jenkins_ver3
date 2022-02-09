@@ -1,8 +1,11 @@
 package se.yrgo.classes;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class WordFinder {
+
+    Scanner scanner = new Scanner(System.in);
 
     /**
      * This method searches for a given internet abbreviation. If it exists, it prints out its meaning.
@@ -14,12 +17,11 @@ public class WordFinder {
 
     public String findExpression(HashMap<String,String> hash, String input) {
 
-        String expression = input.trim();
+            String expression = input.trim();
 
-        if (hash.get(expression) == null){
-            throw new ExpressionNotFoundException("Idiot! This means nothing. Good bye!");
-
-        }
+            if (hash.get(expression) == null) {
+                throw new ExpressionNotFoundException("Idiot! This means nothing. Good bye!");
+            }
 
         return hash.get(expression);
     }

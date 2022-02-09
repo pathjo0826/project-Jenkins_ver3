@@ -21,7 +21,6 @@ public class FillMap {
 
             while (true) {
                 key = reader.readLine();
-                System.out.println(key);
                 if (key == null) {
                     break;
                 }
@@ -29,7 +28,6 @@ public class FillMap {
                 if (value == null) {
                     break;
                 }
-                System.out.println(value);
                 map.put(key, value);
             }
 

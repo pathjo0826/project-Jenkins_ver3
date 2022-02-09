@@ -35,8 +35,8 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Enter abbreviation to look up: ");
-                    String abbreviation = scanner.nextLine();
-                    System.out.println(wf.findExpression(map, abbreviation)); 
+                    String expression = scanner.nextLine();
+                    System.out.println(wf.findExpression(map, expression));
                     break;
                 case 3:
                     break foreverloop;
