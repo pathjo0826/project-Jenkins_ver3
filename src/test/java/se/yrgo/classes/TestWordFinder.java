@@ -22,9 +22,6 @@ public class TestWordFinder {
         HashMap<String, String> hashMap = new HashMap();
         hashMap.put("wtf", "what the fuck");
 
-        //Scanner sc = new Scanner(System.in);
-        //String expression = sc.nextLine();
-
         WordFinder wf = new WordFinder();
         wf.findExpression(hashMap,"wtf");
 
@@ -39,8 +36,6 @@ public class TestWordFinder {
 
         WordFinder wf = new WordFinder();
 
-
-        //assertThrows(ExpressionNotFoundException.class, wf.findExpression(hashMap, "laaal"));
         assertThrows(ExpressionNotFoundException.class, () -> wf.findExpression(hashMap,"laaal"));
     }
 

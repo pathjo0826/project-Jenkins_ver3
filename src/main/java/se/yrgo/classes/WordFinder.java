@@ -1,7 +1,6 @@
 package se.yrgo.classes;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class WordFinder {
 
@@ -18,10 +17,11 @@ public class WordFinder {
         String expression = input.trim();
 
         if (hash.get(expression) == null){
-            throw new ExpressionNotFoundException("This abbreviation has no meaning.");
+            throw new ExpressionNotFoundException("Idiot! This means nothing. Good bye!");
+
         }
 
-        return hash.get(expression.trim());
+        return hash.get(expression);
     }
 
 }

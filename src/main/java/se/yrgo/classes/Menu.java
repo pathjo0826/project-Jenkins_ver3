@@ -11,6 +11,9 @@ public class Menu {
         HashMap<String, String> map = new HashMap<>();
         WordFinder wf = new WordFinder();
         AddWords aw = new AddWords();
+        FillMap fm = new FillMap();
+
+        fm.fillMap(map);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Meny: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation \n Press 3 to exit");
@@ -35,7 +38,7 @@ public class Menu {
                     break;
             }
             System.out.println("Meny: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation");
-            input = scanner.nextInt();
+            //input = scanner.nextInt();
         }
         System.out.println("Welcome back!");
 
