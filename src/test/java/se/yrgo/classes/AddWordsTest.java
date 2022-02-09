@@ -23,7 +23,7 @@ public class AddWordsTest {
 
         storedWords.put(shortWord, userEntersWords);
 
-        assertEquals(storedWords.get("lol"), "laugh out loud", "Testing to add one word in map");
+        assertEquals(storedWords.put(shortWord, userEntersWords), storedWords.get(shortWord), "Testing to add one word and then fetching the key from the map");
     }
 
 
