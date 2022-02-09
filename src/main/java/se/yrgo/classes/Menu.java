@@ -19,12 +19,14 @@ public class Menu {
         System.out.println("Meny: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation \n Press 3 to exit");
         int input = 0;
 
-        try {
-            input = Integer.parseInt(scanner.nextLine());
-        } catch (NumberFormatException ex) {
-            ex.printStackTrace();
-        }
+
         while (input != 3) {
+
+            try {
+                input = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException ex) {
+                ex.printStackTrace();
+            }
 
             switch (input) {
 
