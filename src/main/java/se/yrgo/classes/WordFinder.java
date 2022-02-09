@@ -6,7 +6,7 @@ public class WordFinder {
 
     /**
      * This method searches for a given internet abbreviation. If it exists, it prints out its meaning.
-     * If the abbreviation does not exist it throws an exception.
+     * If the abbreviation does not exist it throws an exception and tells you to kys.
      * @param hash
      * @param input
      * @return
