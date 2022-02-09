@@ -29,7 +29,7 @@ public class Menu {
             switch (input) {
 
                 case 1:
-                    aw.AddWord();
+                    aw.addWord(map);
                     break;
                 case 2:
                     System.out.println("Enter abbreviation to look up: ");

@@ -13,7 +13,7 @@ public class AddWords {
      * If the word already exists in the library it throws a IOException with a message.
      * @throws IOException
      */
-    public void AddWord() throws IOException {
+    public HashMap<String, String> addWord(HashMap<String, String> map) throws IOException {
         HashMap<String, String> storedWords = new HashMap<>();
 
         try {
@@ -28,6 +28,6 @@ public class AddWords {
             System.err.println("Something went wrong here");
             ex.printStackTrace();
         }
-
+        return map;
     }
 }
