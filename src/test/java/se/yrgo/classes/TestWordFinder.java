@@ -16,9 +16,9 @@ public class TestWordFinder {
     }
 
     /**
-     * Tests that "findExpression" method extracts the value associated with
-     * key entered as argument. The method ensures that whitespaces are trimmed
-     * from the front- and end of the entered string.
+     * Tests that findExpression-method extracts the value associated with the
+     * key entered as argument. The test includes correct trimming of input String
+     * parameter, i.e. that whitespaces are removed and conversion to lower case occurs.
      */
 
     @Test
@@ -26,25 +26,24 @@ public class TestWordFinder {
 
         String key1 = "wtf";
         String key2 = " wtf ";
+        String key3 = " WTF";
         String value = "what the fuck";
 
 
         HashMap<String, String> hashMap = new HashMap();
         hashMap.put(key1, value);
-        hashMap.put(key2, value);
 
         WordFinder wf = new WordFinder();
-        wf.findExpression(hashMap,key1);
 
-        assertEquals(value, hashMap.get(key1));
-        assertEquals(value, hashMap.get(key1));
-
+        assertEquals(value, wf.findExpression(hashMap,key1));
+        assertEquals(value, wf.findExpression(hashMap,key2));
+        assertEquals(value, wf.findExpression(hashMap,key3));
 
     }
 
     /**
-     * Tests that "findExpression" throws an ExpressionNotFoundException if the entered
-     * internet expression (key in hashMap) does not exists.
+     * Tests that findExpression-method throws an ExpressionNotFoundException if the entered
+     * internet expression (= key in hashMap) does not exist.
      */
 
     @Test

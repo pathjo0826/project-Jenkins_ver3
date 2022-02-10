@@ -15,7 +15,7 @@ public class WordFinder {
 
     public String findExpression(HashMap<String,String> hash, String input) throws ExpressionNotFoundException {
 
-            String expression = input.trim();
+            String expression = input.trim().toLowerCase();
 
             if (hash.get(expression) == null) {
                 throw new ExpressionNotFoundException("Idiot! This means nothing.");
