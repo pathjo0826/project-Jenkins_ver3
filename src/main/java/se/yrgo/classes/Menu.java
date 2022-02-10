@@ -35,22 +35,17 @@ public class Menu {
                 case 1:
                     map = aw.addWord(map, scanner);
                     break;
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b078e49ed6dbfdb3db4fdc3ba462001fb36ad7d
                 case 2:
                     EnterExpressionUI ex = new EnterExpressionUI();
                     System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
                     break;
 
                 case 3:
-                lw.listExpressions(map);
-                break;
+                    lw.listExpressions(map);
+                    break;
 
                 case 4:
-                break foreverloop;
-                
+                    break foreverloop;
                 default:
                     System.out.println("Wrong input, enter one of the following");
                     break;
