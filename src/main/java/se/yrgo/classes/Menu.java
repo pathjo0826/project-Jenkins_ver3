@@ -35,7 +35,10 @@ public class Menu {
                 case 1:
                     map = aw.addWord(map, scanner);
                     break;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b078e49ed6dbfdb3db4fdc3ba462001fb36ad7d
                 case 2:
                     EnterExpressionUI ex = new EnterExpressionUI();
                     System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
