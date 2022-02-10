@@ -44,6 +44,7 @@ public class TestAddWords {
      * Then it changes the int variable mapSize to be the same size as the Hashmap.
      * When this is done it will check that the variable mapSize is the same size as the HashMap and the adding of an abbreviation has been successfully done.
      */
+
     @Test
     public void testAgreeingToEnterAbbreviationToMap() {
         String agree = "y";
@@ -55,4 +56,5 @@ public class TestAddWords {
         }
         assertEquals(mapSize, storedWords.size());
     }
+
 }
