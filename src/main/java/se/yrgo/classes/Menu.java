@@ -36,9 +36,14 @@ public class Menu {
                     map = aw.addWord(map, scanner);
                     break;
                 case 2:
-                    EnterExpressionUI ex = new EnterExpressionUI();
-                    System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
+                    try {
+                        EnterExpressionUI ex = new EnterExpressionUI();
+                        System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
+                    } catch (ExpressionNotFoundException e){
+                        e.getMessage();
+                    }
                     break;
+
 
                 case 3:
                     lw.listExpressions(map);

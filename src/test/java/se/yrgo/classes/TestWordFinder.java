@@ -49,7 +49,7 @@ public class TestWordFinder {
 
     @Test
     public void testExpressionNotFound(){
-        final HashMap<String, String> hashMap = new HashMap<>();
+        HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("lol", "laughing out loud");
 
         WordFinder wf = new WordFinder();

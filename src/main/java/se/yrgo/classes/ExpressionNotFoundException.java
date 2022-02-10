@@ -5,6 +5,7 @@ public class ExpressionNotFoundException extends RuntimeException {
 
     public ExpressionNotFoundException(String message){
 
+        System.out.println(message);
     }
 
 }
