@@ -2,22 +2,31 @@ package se.yrgo.classes;
 
 import org.junit.jupiter.api.Test;
 import java.util.HashMap;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 public class TestFillMap {
 
     /**
-     * Tests that hashMap is loaded (or at least not empty) at
-     * start of running the program.
+     * Tests that the HashMap is loaded at program initialization
+     * with the number of mappings that can be found in abbreviations.txt.
      */
 
     @Test
     public void testFillMap(){
 
-        HashMap<String, String> hash = new HashMap<>();
-        FillMap fm = new FillMap();
+        int noOfExpectedMappings = 32;
 
-        assertFalse(fm.fillMap(hash).isEmpty());
+        HashMap<String, String> hash = new HashMap<>();
+
+        FillMap fm = new FillMap();
+        fm.fillMap(hash);
+
+        System.out.println("Number of expected mappings: " + noOfExpectedMappings);
+        System.out.println("Actual number of mappings: " + hash.size());
+
+        assertEquals(noOfExpectedMappings, hash.size());
     }
 }

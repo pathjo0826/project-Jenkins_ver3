@@ -9,9 +9,12 @@ import java.io.IOException;
 
 public class FillMap {
 
+    private int noOfMappings = 0;
+
     /**
      * This method fills up a HashMap with keys of "internet expressions" and values of
-     * their respective meanings. The HashMap inputs are read from a text file.
+     * their respective meanings. The parameters to the HashMap.put() method are read
+     * from a text file.
      * @param map
      * @return
      */
@@ -33,6 +36,7 @@ public class FillMap {
                     break;
                 }
                 map.put(key, value);
+                setNoOfMappings(1);
             }
 
         } catch (FileNotFoundException ex) {
@@ -41,5 +45,15 @@ public class FillMap {
             ex.printStackTrace();
         }
         return map;
+    }
+
+    //Setter
+    public void setNoOfMappings(int number){
+        this.noOfMappings = noOfMappings + number;
+    }
+
+    //Getter
+    public int getNoOfMappings(){
+        return noOfMappings;
     }
 }

@@ -9,16 +9,11 @@ import java.util.Scanner;
 
 public class TestWordFinder {
 
-
-    @Test
-    public void test(){
-        System.out.println("This is a test");
-    }
-
     /**
      * Tests that findExpression-method extracts the value associated with the
      * key entered as argument. The test includes correct trimming of input String
-     * parameter, i.e. that whitespaces are removed and conversion to lower case occurs.
+     * parameter, i.e. whitespaces are removed and automatic conversion to lower case
+     * letters occurs.
      */
 
     @Test
@@ -42,8 +37,8 @@ public class TestWordFinder {
     }
 
     /**
-     * Tests that findExpression-method throws an ExpressionNotFoundException if the entered
-     * internet expression (= key in hashMap) does not exist.
+     * Tests that findExpression-method throws an ExpressionNotFoundException if the
+     * entered internet expression does not exist.
      */
 
     @Test
