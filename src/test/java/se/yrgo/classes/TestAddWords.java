@@ -10,10 +10,14 @@ public class TestAddWords {
     private String abbreviation = "lol";
     private HashMap<String, String> storedWords = new HashMap<>();
 
+    /**
+     * This test adds one abbreviation and the meaning to that abbreviation to a HashMap.
+     * Once that is done it will look for the word that was added and check if the abbreviation matches the word.
+     */
     @Test
     public void testAddingWordsToHashMap() {
         storedWords.put(abbreviation, wordMeaning);
-        assertEquals(wordMeaning, storedWords.get(abbreviation), "Testing to add one word and then fetching the key from the map");
+        assertEquals(wordMeaning, storedWords.get(abbreviation));
     }
 
 
