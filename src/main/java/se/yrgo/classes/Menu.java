@@ -35,11 +35,7 @@ public class Menu {
                     map = aw.addWord(map, scanner);
                     break;
                 case 2:
-                    //System.out.println("Enter expression to look up: ");
-                    //String expression = scanner.nextLine();
                     EnterExpressionUI ex = new EnterExpressionUI();
-                    //ex.enterExpression(scanner);
-
                     System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
                     break;
                 case 3:
