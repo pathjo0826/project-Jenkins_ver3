@@ -19,7 +19,7 @@ public class AddWords {
 
         try {
             System.out.println("What abbreviation would you like to add?");
-            abbreviation = scan.nextLine();
+            abbreviation = scan.nextLine().toLowerCase();
             if(map.containsKey(abbreviation)){
                 System.out.println("This word already exists in Library");
                 return map;
