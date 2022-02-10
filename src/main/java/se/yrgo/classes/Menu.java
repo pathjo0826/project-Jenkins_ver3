@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
 public class Menu {
 
     public void programMenu() throws IOException {
@@ -21,7 +22,7 @@ public class Menu {
 
         foreverloop:
         while (true) {
-            System.out.println("Menu: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation \n Press 3 to exit");
+            System.out.println("Menu: \n Press 1 to add internet abbreviation \n Press 2 to look up internet abbreviation \n Press 3 to list all \n Press 4 to exit");
 
             try {
                 input = Integer.parseInt(scanner.nextLine());
@@ -34,19 +35,19 @@ public class Menu {
                 case 1:
                     map = aw.addWord(map, scanner);
                     break;
-                case 2:
-                    //System.out.println("Enter expression to look up: ");
-                    //String expression = scanner.nextLine();
-                    EnterExpressionUI ex = new EnterExpressionUI();
-                    //ex.enterExpression(scanner);
 
+                case 2:
+                    EnterExpressionUI ex = new EnterExpressionUI();
                     System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
                     break;
+
                 case 3:
-                    break foreverloop;
+                lw.listExpressions(map);
+                break;
+
                 case 4:
-                    lw.listExpressions(map);
-                    break;
+                break foreverloop;
+                
                 default:
                     System.out.println("Wrong input, enter one of the following");
                     break;
