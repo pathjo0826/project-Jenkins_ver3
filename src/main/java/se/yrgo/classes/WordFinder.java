@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class WordFinder {
 
-    Scanner scanner = new Scanner(System.in);
+    //Scanner scanner = new Scanner(System.in);
 
     /**
      * This method searches a HashMap for a given internet expression. If it exists, it prints out

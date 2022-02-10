@@ -9,9 +9,10 @@ public class Menu {
     public void programMenu() throws IOException {
 
         HashMap<String, String> map = new HashMap<>();
+        FillMap fm = new FillMap();
         WordFinder wf = new WordFinder();
         AddWords aw = new AddWords();
-        FillMap fm = new FillMap();
+        ListWords lw = new ListWords();
 
         fm.fillMap(map);
 
@@ -34,12 +35,18 @@ public class Menu {
                     map = aw.addWord(map, scanner);
                     break;
                 case 2:
-                    System.out.println("Enter abbreviation to look up: ");
-                    String expression = scanner.nextLine();
-                    System.out.println(wf.findExpression(map, expression));
+                    //System.out.println("Enter expression to look up: ");
+                    //String expression = scanner.nextLine();
+                    EnterExpressionUI ex = new EnterExpressionUI();
+                    //ex.enterExpression(scanner);
+
+                    System.out.println(wf.findExpression(map, ex.enterExpression(scanner)));
                     break;
                 case 3:
                     break foreverloop;
+                case 4:
+                    lw.listExpressions(map);
+                    break;
                 default:
                     System.out.println("Wrong input, enter one of the following");
                     break;
