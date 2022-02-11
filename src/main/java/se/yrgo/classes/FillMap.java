@@ -22,7 +22,7 @@ public class FillMap {
     public HashMap<String, String> fillMap(HashMap<String, String> map) {
 
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/se/yrgo/classes/abbreviations.txt"))){
-
+            // src/main/java/se/yrgo/classes/abbreviations.txt
             String key;
             String value;
 
