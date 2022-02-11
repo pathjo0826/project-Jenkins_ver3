@@ -7,6 +7,7 @@
     <groupId>project-Jenkins</groupId>
     <artifactId>0.0.1</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>App</name>
     <build>
         <plugins>
             <plugin>
@@ -19,6 +20,7 @@
                     <source>11</source>
                     <target>11</target>
                     <verbose>false</verbose>
+
                 </configuration>
             </plugin>
             <plugin>
@@ -31,6 +33,12 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.0.1</version>
                 <configuration>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <mainClass>se.yrgo.classes.App</mainClass>
+                        </manifest>
+                    </archive>
                     <javadocExecutable>${java.home}/bin/javadoc</javadocExecutable>
                 </configuration>
             </plugin>

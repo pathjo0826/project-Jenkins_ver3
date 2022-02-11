@@ -44,7 +44,6 @@ public class Menu {
                     }
                     break;
 
-
                 case 3:
                     lw.listExpressions(map);
                     break;
