@@ -6,8 +6,14 @@ import java.util.Scanner;
 
 
 public class Menu {
-
+    
+    /**
+    * This method creates a user friendly menu that is displayed in the terminal 
+    * using a switch-case, each case contains a method that is necessary 
+    * for the program to run properly
+    */
     public void programMenu() throws IOException {
+
 
         HashMap<String, String> map = new HashMap<>();
         FillMap fm = new FillMap();
