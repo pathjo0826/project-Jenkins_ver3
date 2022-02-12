@@ -14,5 +14,5 @@ To run it in a Editor:
 
 To run it in the Terminal:
 1. navigate in to the folder called project-jenkins_ver3, there will be a pom.xml file in that folder.
-2. From there type: mvn package exec:java
+2. From there type: mvn exec:java
 3. Follow the instructions in the terminal.
