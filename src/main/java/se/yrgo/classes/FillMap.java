@@ -19,7 +19,7 @@ public class FillMap {
      * @return
      */
 
-    public HashMap<String, String> fillMap(HashMap<String, String> map) {
+    public HashMap<String, String> fillMap(HashMap<String, String> map) throws IOException {
 
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/se/yrgo/classes/abbreviations.txt"))){
     

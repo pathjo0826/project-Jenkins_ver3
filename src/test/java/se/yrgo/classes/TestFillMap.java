@@ -1,6 +1,8 @@
 package se.yrgo.classes;
 
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -11,10 +13,11 @@ public class TestFillMap {
     /**
      * Tests that the HashMap is loaded at program initialization
      * with the number of mappings that can be found in abbreviations.txt.
+     * @throws IOException
      */
 
     @Test
-    public void testFillMap(){
+    public void testFillMap() throws IOException{
 
         int noOfExpectedMappings = 32;
 

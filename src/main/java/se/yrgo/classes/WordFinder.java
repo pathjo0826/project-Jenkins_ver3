@@ -21,7 +21,6 @@ public class WordFinder {
             }
 
         return hash.get(expression);
-
     }
 
 }
