@@ -1,7 +1,6 @@
 package se.yrgo.classes;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class WordFinder {
 

@@ -1,6 +1,7 @@
 package se.yrgo.classes;
 
-import java.util.*;
+import java.util.Set;
+import java.util.HashMap;
 
 public class ListWords {
 
@@ -18,7 +19,6 @@ public class ListWords {
             System.out.print(s + ", ");
         }
 
-        System.out.println();
         System.out.println("\n");
     }
 }
