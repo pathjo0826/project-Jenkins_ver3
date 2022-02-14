@@ -14,5 +14,5 @@ To run it in an Editor:
 
 To run it in the Terminal:
 1. Navigate to the folder called project-jenkins_ver3, there will be a pom.xml file in that folder.
-2. From there type: mvn package javadoc:javadoc exec:java
+2. From there type: java -jar .\target\0.0.1-1.0-SNAPSHOT.jar
 3. The program will run. Follow the instructions in the terminal.
