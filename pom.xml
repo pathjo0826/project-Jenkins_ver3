@@ -20,7 +20,6 @@
                     <source>11</source>
                     <target>11</target>
                     <verbose>false</verbose>
-
                 </configuration>
             </plugin>
             <plugin>
@@ -50,6 +49,21 @@
                     <mainClass>se.yrgo.classes.App</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>libs/</classpathPrefix>
+                <mainClass>
+                    se.yrgo.classes.App
+                </mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+</plugin>
         </plugins>
     </build>
     <dependencies>
